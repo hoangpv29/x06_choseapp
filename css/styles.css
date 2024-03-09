@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#app {
+  background-color: rgb(188, 215, 245);
+  background-image: url("https://x06dev.lifetek.vn/7df3bc34aaddac2c3c79ba4b4f39bf22.jpg"); /* Thay đổi đường dẫn đến hình nền của bạn */
+  margin: 0 auto;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*header*/
+.header {
+  height: 60px;
+  background-color: #010204;
+  padding: 0 15px;
+  display: grid;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.my-infor {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 10px;
+  position: relative;
+}
+.my-infor .my-infor__name > p {
+  color: #efefefef;
+}
+.my-infor__image img {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.my-infor__image button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.my-infor__option {
+  height: 60px;
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  border-radius: 10px;
+  display: none;
+}
+.my-infor__option .ul {
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+.my-infor__option .ul li {
+  height: 30px;
+  background-color: rgb(192, 179, 179);
+  list-style-type: none;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.my-infor__option .ul li {
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  list-style-type: none;
+  padding-left: 16px;
+  padding-right: 16px;
+  line-height: 30px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+}
+
+.ul li:nth-child(1) {
+  /* Styles for the first list item */
+  color: rgb(0, 0, 0);
+  border-radius: 5px 5px 0 0;
+}
+
+.ul li:nth-child(1):hover {
+  cursor: pointer;
+  background-color: rgb(185, 178, 178);
+}
+.ul li:nth-child(2) {
+  /* Styles for the second list item (time) */
+  font-weight: bold;
+  border-radius: 0 0 5px 5px;
+}
+.ul li:nth-child(2):hover {
+  /* Styles for the second list item (time) */
+  font-weight: bold;
+  border-radius: 0 0 5px 5px;
+
+  cursor: pointer;
+  background-color: rgb(185, 178, 178);
+}
+/*main*/
+
+.main {
+  padding-top: 5px;
+  width: 1000px;
+  margin: auto;
+
+  /* background-color: rgb(77, 86, 95); */
+  /* height: 800px; */
+}
+
+.grid-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
+  column-gap: 5px;
+}
+.item-bg {
+  height: 150px;
+  width: 245px;
+  text-align: center;
+}
+.grid-items .item {
+  margin: 0 auto;
+}
+.item-hover {
+  position: relative;
+  width: 150px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  transition: 0.5s;
+  max-width: 200px;
+  height: 150px;
+  margin: auto;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  border-radius: 10px;
+  cursor: pointer;
+}
+@keyframes lentren {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.item-hover:hover {
+  /* opacity: 0.8; */
+  cursor: pointer;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  );
+  animation: lentren 1s forwards;
+}
+
+.grid-items .item img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  text-align: center;
+  overflow: hidden;
+}
+
+.grid-items .item .item__name {
+  /* font-size: 14.4px; */
+  color: #efefefef;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*Thong bao*/
+.countAvt {
+  position: absolute;
+  color: #fff;
+  top: -5px;
+  right: 4px;
+  height: 27px;
+  width: 27px;
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.countAvtNull {
+  visibility: hidden;
+}
+
+/*css scrollbar*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
