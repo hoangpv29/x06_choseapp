@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    image: "src/image1.jpg",
+    image: "../img/image1.jpg",
     name: "QLDG Local",
   },
   {
@@ -12,12 +12,12 @@ const data = [
   },
   {
     id: 3,
-    image: "src/image3.png",
+    image: "src/img/image3.png",
     name: "Quản trị viên",
   },
   {
     id: 4,
-    image: "src/image4.jpg",
+    image: "/img/image4.jpg",
     name: "Quản trị ứng dụng",
   },
   {
