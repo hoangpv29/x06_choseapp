@@ -27,13 +27,13 @@ const data = [
   },
   {
     id: 1,
-    image: "src/image1.jpg",
+    image: "image1.jpg",
     name: "QLDG Local",
   },
   {
     id: 2,
     countAvatar: 9,
-    image: "src/image2.gif",
+    image: "img/image2.gif",
     name: "Thong tin dang vien",
   },
   {
@@ -59,7 +59,7 @@ const data = [
   {
     id: 2,
     countAvatar: 9,
-    image: "src/image2.gif",
+    image: "./image2.gif",
     name: "Thong tin dang vien",
   },
   {
