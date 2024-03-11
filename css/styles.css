@@ -30,8 +30,11 @@
   column-gap: 10px;
   position: relative;
 }
-.my-infor .my-infor__name > p {
+.my-infor .my-infor__name .currentUser-name {
   color: #efefefef;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
 .my-infor__image img {
   height: 25px;
@@ -75,12 +78,17 @@
   line-height: 30px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
+  font-size: 13px;
 }
-
+.my-infor__option .ul li .logout {
+  padding: 0 16px;
+}
 .ul li:nth-child(1) {
   /* Styles for the first list item */
   color: rgb(0, 0, 0);
   border-radius: 5px 5px 0 0;
+  display: flex;
+  gap: 1 1;
 }
 
 .ul li:nth-child(1):hover {
@@ -89,12 +97,13 @@
 }
 .ul li:nth-child(2) {
   /* Styles for the second list item (time) */
-  font-weight: bold;
+  font-weight: 400;
   border-radius: 0 0 5px 5px;
+  color: rgba(0, 0, 0, 0.87);
 }
 .ul li:nth-child(2):hover {
   /* Styles for the second list item (time) */
-  font-weight: bold;
+
   border-radius: 0 0 5px 5px;
 
   cursor: pointer;
@@ -216,4 +225,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-

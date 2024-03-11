@@ -15,7 +15,7 @@
       <header class="header">
         <div class="my-infor">
           <div class="my-infor__name">
-            <p>Cán bọo 1 pv0</p>
+            <p class="currentUser-name">Cán bọo 1 pv0</p>
           </div>
           <div class="my-infor__image">
             <button class="my-infor__btn">
@@ -28,12 +28,23 @@
           <div class="my-infor__option">
             <ul class="ul">
               <li>
-                <span
+                <span style="display: flex; align-items: center"
                   ><i
                     class="fa-solid fa-arrow-right-from-bracket"
-                    style="margin-right: 5px"
+                    style="
+                      margin-right: 5px;
+                      fill: currentColor;
+                      width: 1em;
+                      height: 1em;
+                      display: inline-block;
+                      font-size: 20px;
+                      transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                      user-select: none;
+                      flex-shrink: 0;
+                      line-height: 1em;
+                    "
                   ></i></span
-                >Dang xuat
+                ><span class="logout">Dang xuat</span>
               </li>
               <li class="time">Time</li>
             </ul>
@@ -42,80 +53,7 @@
       </header>
       <main class="main">
         <div class="container">
-          <div class="grid-items">
-            <!-- <div class="item-bg">
-              <div class="item">
-                <div class="item-hover">
-                  <img
-                    src="https://g.lifetek.vn:213/api/files/654df9041b99ff1227a0fe6b?allowDefault=true"
-                    alt=""
-                  />
-                  <h4 class="item__name">Name</h4>
-                </div>
-              </div>
-            </div>
-         
-            <div class="item-bg">
-              <div class="item">
-                <div class="item-hover">
-                  <span class="countAvt">9</span>
-                  <img
-                    src="https://g.lifetek.vn:213/api/files/654df9041b99ff1227a0fe6b?allowDefault=true"
-                    alt=""
-                  />
-                  <p class="item__name">Name</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="item-bg">
-              <div class="item">
-                <div class="item-hover">
-                  <img
-                    src="https://g.lifetek.vn:213/api/files/654df9041b99ff1227a0fe6b?allowDefault=true"
-                    alt=""
-                  />
-                  <p class="item__name">Name</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="item-bg">
-              <div class="item">
-                <div class="item-hover">
-                  <img
-                    src="https://g.lifetek.vn:213/api/files/654df9041b99ff1227a0fe6b?allowDefault=true"
-                    alt=""
-                  />
-                  <p class="item__name">Name</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="item-bg">
-              <div class="item">
-                <div class="item-hover">
-                  <img
-                    src="https://g.lifetek.vn:213/api/files/64a4c061645ef6212f3551e5"
-                    alt=""
-                  />
-                  <p class="item__name">Name</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="item-bg">
-              <div class="item">
-                <div class="item-hover">
-                  <img
-                    src="https://g.lifetek.vn:213/api/files/654df9041b99ff1227a0fe6b?allowDefault=true"
-                    alt=""
-                  />
-                  <p class="item__name">Name</p>
-                </div>
-              </div>
-            </div> -->
-          </div>
+          <div class="grid-items"></div>
         </div>
       </main>
     </div>

@@ -150,12 +150,14 @@ function capNhatGio() {
 
   currentTimeElement.innerHTML =
     dayOfMonth +
-    "-" +
+    "/" +
     month +
-    "-" +
+    "/" +
     currentTime.getFullYear() +
     " " +
-    currentTime.toLocaleTimeString();
+    currentTime.getHours() +
+    ":" +
+    currentTime.getMinutes();
 }
 
 // Cập nhật liên tục mỗi giây
@@ -163,7 +165,7 @@ setInterval(capNhatGio, 1000);
 
 btnMyprofile.addEventListener("click", (event) => {
   event.stopPropagation();
-
+  
   myInfoOption.style.display =
     myInfoOption.style.display === "block" ? "none" : "block";
 });
@@ -176,6 +178,10 @@ document.addEventListener("click", (event) => {
     myInfoOption.style.display = "none";
   }
 });
+//chan lan chuot
+function disableScroll(event) {
+  event.preventDefault();
+}
 const listItem = document.querySelector(".grid-items");
 listItem.innerHTML = data
   .map(
