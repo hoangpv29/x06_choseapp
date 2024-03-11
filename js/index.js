@@ -134,11 +134,36 @@ const data = [
 const btnMyprofile = document.querySelector(".my-infor__btn");
 const myInfoOption = document.querySelector(".my-infor__option");
 const timeM = document.querySelector(".time");
+// function capNhatGio() {
+//   var currentTimeElement = document.querySelector(".time");
+//   var currentTime = new Date();
+
+//   // them 0 neu month < 10
+//   var dayOfMonth =
+//     currentTime.getDate() < 10
+//       ? "0" + currentTime.getDate()
+//       : currentTime.getDate();
+//   var month =
+//     currentTime.getMonth() + 1 < 10
+//       ? "0" + (currentTime.getMonth() + 1)
+//       : currentTime.getMonth() + 1;
+
+//   currentTimeElement.innerHTML =
+//     dayOfMonth +
+//     "/" +
+//     month +
+//     "/" +
+//     currentTime.getFullYear() +
+//     " " +
+//     currentTime.getHours() +
+//     ":" +
+//     currentTime.getMinutes();
+// }
 function capNhatGio() {
   var currentTimeElement = document.querySelector(".time");
   var currentTime = new Date();
 
-  // them 0 neu month < 10
+  // Add a leading zero if month < 10
   var dayOfMonth =
     currentTime.getDate() < 10
       ? "0" + currentTime.getDate()
@@ -148,6 +173,7 @@ function capNhatGio() {
       ? "0" + (currentTime.getMonth() + 1)
       : currentTime.getMonth() + 1;
 
+  // Display the formatted date and time
   currentTimeElement.innerHTML =
     dayOfMonth +
     "/" +
@@ -155,9 +181,13 @@ function capNhatGio() {
     "/" +
     currentTime.getFullYear() +
     " " +
-    currentTime.getHours() +
+    (currentTime.getHours() < 10
+      ? "0" + currentTime.getHours()
+      : currentTime.getHours()) +
     ":" +
-    currentTime.getMinutes();
+    (currentTime.getMinutes() < 10
+      ? "0" + currentTime.getMinutes()
+      : currentTime.getMinutes());
 }
 
 // Cập nhật liên tục mỗi giây
@@ -165,7 +195,7 @@ setInterval(capNhatGio, 1000);
 
 btnMyprofile.addEventListener("click", (event) => {
   event.stopPropagation();
-  
+
   myInfoOption.style.display =
     myInfoOption.style.display === "block" ? "none" : "block";
 });
