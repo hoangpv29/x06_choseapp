@@ -5,6 +5,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  overflow: hidden;
+}
 #app {
   background-color: rgb(188, 215, 245);
   background-image: url("https://x06dev.lifetek.vn/7df3bc34aaddac2c3c79ba4b4f39bf22.jpg"); /* Thay đổi đường dẫn đến hình nền của bạn */
