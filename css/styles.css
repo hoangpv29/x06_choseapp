@@ -115,9 +115,12 @@
   background-color: rgba(0, 0, 0, 0.65);
   min-height: 100vh;
 }
+.container {
+  width: 100%;
+}
 .main {
   padding-top: 5px;
-  width: 1000px;
+  max-width: 1000px;
   margin: auto;
   min-height: 100vh;
   /* background-color: rgb(77, 86, 95); */
@@ -228,4 +231,35 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+@media screen and (min-width: 500px) and (max-width: 961px) {
+  .main {
+    width: 100%;
+
+    /* background-color: rgb(77, 86, 95); */
+    /* height: 800px; */
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .grid-items {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-items .item {
+    margin: 0 auto;
+  }
+
+  .grid-items .item img {
+    height: 90px;
+    width: 90px;
+  }
+
+  /*Thong bao*/
+  .countAvt {
+    height: 24px;
+    width: 24px;
+  }
 }
